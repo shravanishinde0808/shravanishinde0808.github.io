@@ -196,7 +196,6 @@ function openProjectModal(project) {
     // Populate modal content
     modalContent.innerHTML = `
         <div class="modal-header">
-            <span class="modal-case-study">Case Study</span>
             <h3 class="modal-title">${project.title}</h3>
             <div class="modal-tech">
                 ${project.tech.map(tech => `<span class="modal-tech-tag">${tech}</span>`).join('')}
