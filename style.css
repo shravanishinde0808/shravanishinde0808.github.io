@@ -1732,6 +1732,12 @@ a.contact-value:hover {
     font-weight: 500;
     color: var(--foreground);
     border-radius: 0 0.125rem 0.125rem 0;
+    margin-bottom: 1.5rem;
+    transition: all 300ms var(--transition-timing);
+}
+
+.form-alert.hidden {
+    display: none;
 }
 
 .form-row {
@@ -1783,6 +1789,16 @@ a.contact-value:hover {
 .form-group textarea:focus {
     outline: none;
     border-bottom-color: var(--foreground);
+}
+
+.form-group input:invalid:not(:placeholder-shown),
+.form-group textarea:invalid:not(:placeholder-shown) {
+    border-bottom-color: #ef4444;
+}
+
+.form-group input:valid:not(:placeholder-shown),
+.form-group textarea:valid:not(:placeholder-shown) {
+    border-bottom-color: #10b981;
 }
 
 .form-group textarea {

@@ -259,9 +259,28 @@ document.addEventListener('keydown', (e) => {
 // Contact Form
 const contactForm = document.getElementById('contactForm');
 const formAlert = document.getElementById('formAlert');
-const successMessage = document.getElementById('successMessage');
-const sendAnother = document.getElementById('sendAnother');
 const submitBtn = document.getElementById('submitBtn');
+
+// Validation helper functions
+function validateEmail(email) {
+    const re = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
+    return re.test(String(email).toLowerCase());
+}
+
+function validateName(name) {
+    return name.trim().length >= 2 && /^[A-Za-z\s]+$/.test(name);
+}
+
+function showError(message) {
+    formAlert.classList.remove('hidden');
+    formAlert.style.backgroundColor = 'var(--error-color, #ef4444)';
+    formAlert.style.color = 'white';
+    formAlert.innerHTML = `
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        ${message}
+    `;
+    formAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
 
 contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -269,11 +288,32 @@ contactForm.addEventListener('submit', async (e) => {
     // Get form data
     const formData = new FormData(contactForm);
     const data = {
-        name: formData.get('name'),
-        email: formData.get('email'),
-        subject: formData.get('subject'),
-        message: formData.get('message')
+        name: formData.get('name').trim(),
+        email: formData.get('email').trim(),
+        subject: formData.get('subject').trim(),
+        message: formData.get('message').trim()
     };
+    
+    // Validate form data
+    if (!validateName(data.name)) {
+        showError('Please enter a valid name (letters and spaces only, minimum 2 characters)');
+        return;
+    }
+    
+    if (!validateEmail(data.email)) {
+        showError('Please enter a valid email address');
+        return;
+    }
+    
+    if (data.subject.length < 3 || data.subject.length > 100) {
+        showError('Subject must be between 3 and 100 characters');
+        return;
+    }
+    
+    if (data.message.length < 10 || data.message.length > 1000) {
+        showError('Message must be between 10 and 1000 characters');
+        return;
+    }
     
     // Show loading state
     submitBtn.disabled = true;
@@ -297,20 +337,33 @@ contactForm.addEventListener('submit', async (e) => {
         console.log('Email sent successfully:', response);
         
         // Show success message
-        contactForm.classList.add('hidden');
-        successMessage.classList.add('active');
+        formAlert.classList.remove('hidden');
+        formAlert.style.backgroundColor = 'var(--success-color, #10b981)';
+        formAlert.style.color = 'white';
+        formAlert.innerHTML = `
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            Message sent successfully! Thank you for reaching out. I'll get back to you shortly.
+        `;
         
         // Reset form
         contactForm.reset();
+        
+        // Scroll to show the success message
+        formAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         
     } catch (error) {
         console.error('Email send failed:', error);
         // Show error
         formAlert.classList.remove('hidden');
+        formAlert.style.backgroundColor = 'var(--error-color, #ef4444)';
+        formAlert.style.color = 'white';
         formAlert.innerHTML = `
             <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
             Failed to send message. Please try again or email directly at shravu0808@gmail.com
         `;
+        
+        // Scroll to show the error message
+        formAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     } finally {
         // Reset button
         submitBtn.disabled = false;
@@ -319,11 +372,6 @@ contactForm.addEventListener('submit', async (e) => {
             <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         `;
     }
-});
-
-sendAnother.addEventListener('click', () => {
-    successMessage.classList.remove('active');
-    contactForm.classList.remove('hidden');
 });
 
 // Set current year in footer
