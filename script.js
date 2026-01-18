@@ -24,7 +24,7 @@ const projects = [
         title: "DepressSense",
         shortDesc: "Machine learning–based emotion detection using facial expressions.",
         description: "An ML-powered system that identifies human emotions through facial analysis.",
-        image: "images/depresssense.jpg",
+        image: "images/depressSense.jpg",
         tech: ["Python", "TensorFlow", "OpenCV"],
         github: "https://github.com/shravanishinde0808",
         live: "#",
