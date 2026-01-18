@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shravani Shinde - Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="images/Favicon.svg">
+    <link rel="icon" type="image/svg+xml" sizes="any" href="images/Favicon.svg">
+    <link rel="apple-touch-icon" href="images/Favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "lizmR_YjaalOOgbo3",
+            });
+        })();
+    </script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="container navbar-container">
+            <a href="#home" class="logo">
+                <div class="logo-text">
+                    <img src="images/logo-light.png" alt="Shravani Shinde Logo" class="logo-icon">
+                </div>
+            </a>
+
+            <div class="nav-links" id="navLinks">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+
+            <div class="nav-controls">
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+                    <svg class="theme-icon moon-icon" viewBox="0 0 24 24" width="20" height="20" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                    <svg class="theme-icon sun-icon hidden" viewBox="0 0 24 24" width="20" height="20" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5" />
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </svg>
+                </button>
+                <button id="menuToggle" class="menu-toggle">
+                    <svg class="menu-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12" />
+                        <line x1="3" y1="6" x2="21" y2="6" />
+                        <line x1="3" y1="18" x2="21" y2="18" />
+                    </svg>
+                    <svg class="close-icon hidden" viewBox="0 0 24 24" width="20" height="20" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#home" class="mobile-link">Home</a>
+            <a href="#about" class="mobile-link">About</a>
+            <a href="#skills" class="mobile-link">Skills</a>
+            <a href="#experience" class="mobile-link">Experience</a>
+            <a href="#projects" class="mobile-link">Projects</a>
+            <a href="#contact" class="mobile-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-background"></div>
+        <div class="container hero-container">
+            <h1 class="hero-title fade-in">
+                SHRAVANI<br>
+                <span class="text-muted">SHINDE</span>
+            </h1>
+            <div class="hero-subtitle fade-in-delay">Full Stack Developer</div>
+            <p class="hero-description fade-in">
+                Building responsive and user-focused web solutions using modern web technologies.
+                Transforming ideas into clean, scalable, and functional digital experiences.
+            </p>
+            <div class="hero-buttons fade-in">
+                <a href="https://drive.google.com/file/d/1cSL9-N1DcoyVGPIevmOTABtEULHOeV8p/view?usp=sharing"
+                    target="_blank" class="btn btn-primary">
+                    Download CV
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="7" y1="17" x2="17" y2="7" />
+                        <polyline points="7 7 17 7 17 17" />
+                    </svg>
+                </a>
+                <a href="#projects" class="btn btn-secondary">My Projects</a>
+            </div>
+            <div class="hero-social fade-in">
+                <a href="https://linkedin.com/in/shravanishinde" target="_blank" class="social-link">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                        <rect x="2" y="9" width="4" height="12" />
+                        <circle cx="4" cy="4" r="2" />
+                    </svg>
+                </a>
+                <a href="https://github.com/shravanishinde0808" target="_blank" class="social-link">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                    </svg>
+                </a>
+                <a href="mailto:shravu0808@gmail.com" class="social-link">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                        <polyline points="22,6 12,13 2,6" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container about-container">
+            <div class="about-image">
+                <div class="image-border"></div>
+                <div class="image-wrapper">
+                    <img src="images/avatar.png" alt="Shravani Shinde">
+                    <div class="image-overlay"></div>
+                </div>
+            </div>
+            <div class="about-content">
+                <div class="section-header">
+                    <!-- <span class="section-tag">Discovery</span> -->
+                    <h2 class="section-title">About Me</h2>
+                    <div class="section-underline"></div>
+                </div>
+                <div class="about-text">
+                    <p>An Information Technology student and Web Developer with a solid foundation in front-end and web
+                        development, focused on crafting responsive, user-centric digital solutions. Skilled in HTML,
+                        CSS, JavaScript, PHP, and MySQL to build well-structured, efficient, and visually balanced
+                        websites with an emphasis on usability and performance.</p>
+                    <p>Project experience includes developing e-commerce platforms, content-based websites, and
+                        administrative dashboards, along with practical exposure to SEO and digital marketing to enhance
+                        online reach. A continuous learner with an interest in UI/UX and modern web technologies, driven
+                        by problem-solving and purposeful software development.</p>
+                </div>
+                <a href="https://drive.google.com/file/d/1cSL9-N1DcoyVGPIevmOTABtEULHOeV8p/view?usp=sharing"
+                    target="_blank" class="btn btn-primary">
+                    Download Resume
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="7" y1="17" x2="17" y2="7" />
+                        <polyline points="7 7 17 7 17 17" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="section-header-row">
+                <div class="section-header">
+                    <!-- <span class="section-tag">Proficiency</span> -->
+                    <h2 class="section-title">Skills</h2>
+                    <div class="section-underline"></div>
+                </div>
+                <!-- <p class="section-description">A comprehensive overview of my technical arsenal and professional capabilities.</p> -->
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3 class="skill-title">Web Development</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">React.js</span>
+
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3 class="skill-title">Programming</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">Core Java</span>
+                        <span class="skill-tag">Python</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3 class="skill-title">Database & Tools</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">Docker</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3 class="skill-title">Marketing & SEO</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Off-Page SEO</span>
+                        <span class="skill-tag">Digital Marketing</span>
+                        <span class="skill-tag">Content Strategy</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3 class="skill-title">Advanced Learning</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">UI/UX Design</span>
+                        <span class="skill-tag">AI/ML</span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section">
+        <div class="container experience-container">
+            <div class="section-header-row">
+                <div class="section-header">
+                    <!-- <span class="section-tag"></span> -->
+                    <h2 class="section-title">Experience</h2>
+                    <div class="section-underline"></div>
+                </div>
+                <!-- <p class="section-description">A journey through my professional growth and technical contributions.</p> -->
+            </div>
+            <div class="experience-list">
+                <div class="experience-card">
+                    <div class="experience-icon">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                        </svg>
+                    </div>
+
+                    <div class="experience-content">
+                        <h3 class="experience-role">Test Series Guide</h3>
+
+                        <p class="experience-company">
+                            <a href="https://www.linkedin.com/posts/shravanishinde_educationforall-academicsupport-learningforall-activity-7408745145103368192-zE9S" target="_blank" rel="noopener noreferrer"
+                                class="company-link">
+                                Learning Support Guide
+                            </a>
+                        </p>
+
+                        <div class="experience-meta">
+                            <div class="meta-item">
+                                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                                    <line x1="16" y1="2" x2="16" y2="6" />
+                                    <line x1="8" y1="2" x2="8" y2="6" />
+                                    <line x1="3" y1="10" x2="21" y2="10" />
+                                </svg>
+                                <span>December 2025</span>
+                            </div>
+
+                            <div class="meta-item">
+                                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                    <circle cx="12" cy="10" r="3" />
+                                </svg>
+                                <span>Mumbai</span>
+                            </div>
+                        </div>
+
+                        <ul class="experience-description">
+                            <li>
+                                <span class="bullet"></span>
+                                Guided students from underprivileged backgrounds through structured academic test series
+                            </li>
+                            <li>
+                                <span class="bullet"></span>
+                                Assisted learners in understanding exam patterns, syllabus coverage, and performance
+                                improvement
+                            </li>
+                            <li>
+                                <span class="bullet"></span>
+                                Provided one-on-one academic support to help students build confidence and consistency
+                            </li>
+                            <li>
+                                <span class="bullet"></span>
+                                Actively contributed to Bhavya Foundation’s mission of ensuring education for all
+                            </li>
+                            <!-- <li>
+                                <span class="bullet"></span>
+                                <a href="https://www.linkedin.com/posts/shravanishinde_educationforall-academicsupport-learningforall-activity-7408745145103368192-zE9S"
+                                    target="_blank" rel="noopener noreferrer" class="company-link">
+                                    View details
+                                </a>
+                            </li> -->
+                        </ul>
+
+                        <div class="experience-tech">
+                            <span class="tech-tag">Academic Mentoring</span>
+                            <span class="tech-tag">Test Series</span>
+                            <span class="tech-tag">Student Guidance</span>
+                            <span class="tech-tag">Education Support</span>
+                            <span class="tech-tag">Community Work</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-icon">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                        </svg>
+                    </div>
+                    <div class="experience-content">
+                        <h3 class="experience-role">Technical Contributor / CMS Developer</h3>
+                        <p class="experience-company"><a href="https://bhavyafoundation.com" target="_blank"
+                                rel="noopener noreferrer" class="company-link">Bhavya Foundation</a></p>
+                        <div class="experience-meta">
+                            <div class="meta-item">
+                                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                                    <line x1="16" y1="2" x2="16" y2="6" />
+                                    <line x1="8" y1="2" x2="8" y2="6" />
+                                    <line x1="3" y1="10" x2="21" y2="10" />
+                                </svg>
+                                <span>Jan 2024 – Present</span>
+                            </div>
+                            <div class="meta-item">
+                                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                    <circle cx="12" cy="10" r="3" />
+                                </svg>
+                                <span>Mumbai</span>
+                            </div>
+                        </div>
+                        <ul class="experience-description">
+                            <li><span class="bullet"></span>Technical lead for website and CMS development</li>
+                            <li><span class="bullet"></span>Designed and developed a custom CMS with an intuitive admin
+                                panel</li>
+                            <li><span class="bullet"></span>Collaborated with the foundation on multiple digital
+                                initiatives</li>
+                            <li><span class="bullet"></span>Currently involved in revamping the platform for improved
+                                performance and UX</li>
+                        </ul>
+                        <div class="experience-tech">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Security</span>
+                            <span class="tech-tag">Performance Optimization</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-icon">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                        </svg>
+                    </div>
+                    <div class="experience-content">
+                        <h3 class="experience-role">Digital Marketing Intern</h3>
+                        <p class="experience-company"><a href="https://www.digicompanions.com/" target="_blank"
+                                rel="noopener noreferrer" class="company-link">DigiCompanions</a></p>
+                        <div class="experience-meta">
+                            <div class="meta-item">
+                                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                                    <line x1="16" y1="2" x2="16" y2="6" />
+                                    <line x1="8" y1="2" x2="8" y2="6" />
+                                    <line x1="3" y1="10" x2="21" y2="10" />
+                                </svg>
+                                <span>June 2023 – July 2023</span>
+                            </div>
+                            <div class="meta-item">
+                                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                    <circle cx="12" cy="10" r="3" />
+                                </svg>
+                                <span>Remote</span>
+                            </div>
+                        </div>
+                        <ul class="experience-description">
+                            <li><span class="bullet"></span>Assisted in managing digital records and campaign data</li>
+                            <li><span class="bullet"></span>Executed off-page SEO strategies to enhance search
+                                visibility</li>
+                            <li><span class="bullet"></span>Built high-quality backlinks through social bookmarking and
+                                directory submissions</li>
+                            <li><span class="bullet"></span>Gained hands-on experience in real-world digital marketing
+                                workflows</li>
+                        </ul>
+                        <div class="experience-tech">
+                            <span class="tech-tag">SEO</span>
+                            <span class="tech-tag">Digital Marketing</span>
+                            <span class="tech-tag">Link Building</span>
+                            <span class="tech-tag">Analytics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header-row">
+                <div class="section-header">
+                    <!-- <span class="section-tag">Selected Works</span> -->
+                    <h2 class="section-title">Projects</h2>
+                    <div class="section-underline"></div>
+                </div>
+                <!-- <p class="section-description">Exploring the intersection of design and technology through practical implementation.</p> -->
+            </div>
+            <div class="projects-grid" id="projectsGrid"></div>
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div class="modal" id="projectModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <button class="modal-close" id="modalClose">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+            </button>
+            <div class="modal-image" id="modalImage"></div>
+            <div class="modal-content" id="modalContent"></div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container contact-container">
+            <div class="contact-info">
+                <div class="section-header">
+                    <span class="section-tag">Get in touch</span>
+                    <h2 class="section-title">Contact</h2>
+                    <div class="section-underline"></div>
+                </div>
+                <p class="contact-intro">Have a project in mind or just want to say hi? Feel free to reach out. I'm
+                    always open to new opportunities and collaborations.</p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="contact-label">Email</p>
+                            <a href="mailto:shravu0808@gmail.com" class="contact-value">shravu0808@gmail.com</a>
+                        </div>
+                    </div>
+                    <!-- <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="contact-label">Contact Number</p>
+                            <a href="tel:+919876543210" class="contact-value">+91 98765 43210</a>
+                        </div>
+                    </div> -->
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="contact-label">Location</p>
+                            <p class="contact-value">Maharashtra, India</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form-wrapper">
+                <form id="contactForm" class="contact-form">
+                    <div id="formAlert" class="form-alert hidden"></div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="email@example.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="What are we discussing?" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Tell me about your project..." rows="4"
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                        Send Message
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </button>
+                </form>
+                <div id="successMessage" class="success-message hidden">
+                    <div class="success-icon">
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                            <polyline points="22 4 12 14.01 9 11.01" />
+                        </svg>
+                    </div>
+                    <h3>Message Sent</h3>
+                    <p>Thank you for reaching out. I'll get back to you shortly.</p>
+                    <button class="btn btn-primary" id="sendAnother">Send Another Message</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-info">
+                <h3 class="footer-title">Shravani <span class="text-muted">Shinde</span></h3>
+                <p class="footer-copyright">© <span id="currentYear"></span> • All Rights Reserved</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://linkedin.com/in/shravanishinde" target="_blank" class="footer-link">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                        <rect x="2" y="9" width="4" height="12" />
+                        <circle cx="4" cy="4" r="2" />
+                    </svg>
+                </a>
+                <a href="https://github.com/shravanishinde0808" target="_blank" class="footer-link">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                    </svg>
+                </a>
+                <a href="mailto:shravu0808@gmail.com" class="footer-link">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                        <polyline points="22,6 12,13 2,6" />
+                    </svg>
+                </a>
+            </div>
+            <div class="footer-tagline">Designed & Built with Precision</div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
